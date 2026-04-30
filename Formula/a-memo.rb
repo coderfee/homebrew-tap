@@ -3,9 +3,9 @@ class AMemo < Formula
 
   desc "Lightweight memo CLI tool with SQLite + FTS5"
   homepage "https://github.com/coderfee/a-memo"
-  url "https://github.com/coderfee/a-memo/releases/download/v1.5.2/a_memo-1.5.2.tar.gz"
-  sha256 "7749fa6845c83b68f670d26cdf5d13138d382d672f14025c4aa0e40b29a469d9"
-  version "1.5.2"
+  url "https://github.com/coderfee/a-memo/releases/download/v1.5.3/a_memo-1.5.3.tar.gz"
+  sha256 "948ea4cde803e2bcc5b14cdf6e2b65a3b898a8f1cc409538e20805a3a4f3e498"
+  version "1.5.3"
   license "MIT"
 
   depends_on "pillow"
