@@ -1,21 +1,18 @@
 class AMemo < Formula
+  include Language::Python::Virtualenv
+
   desc "Lightweight memo CLI tool with SQLite + FTS5"
   homepage "https://github.com/coderfee/a-memo"
-  version "1.5.1"
+  url "https://github.com/coderfee/a-memo/releases/download/v1.5.2/a_memo-1.5.2.tar.gz"
+  sha256 "7749fa6845c83b68f670d26cdf5d13138d382d672f14025c4aa0e40b29a469d9"
+  version "1.5.2"
   license "MIT"
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/coderfee/a-memo/releases/download/v1.5.1/memo-macos-arm64.tar.gz"
-      sha256 "78e111ddab7c14ff2db4f5afa87662c95aca0fb4a131189c365832eb9a232b05"
-    else
-      url "https://github.com/coderfee/a-memo/releases/download/v1.5.1/memo-macos-x86_64.tar.gz"
-      sha256 "44590302f729bba4bb332b4bffcb988cdb9021c632809e1207498fdfd7e0222a"
-    end
-  end
+  depends_on "pillow"
+  depends_on "python@3.13"
 
   def install
-    bin.install "memo"
+    virtualenv_install_with_resources using: "python3.13"
   end
 
   test do
